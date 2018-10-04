@@ -2,45 +2,22 @@
 from collections import Counter
 file=open("Crime.csv")
 count=Counter()
-dict1={}
-dict2={}
+dict={}
 l1=[] #list1
 l2=[] #list2
+l3=[] #list3
 for line in file:
 	line=line.strip()
 	line=line.split(",")
-	l1.append(line[-1])
-	#print(l1)
+	l1.append(line[-1]) #listing all crime type in l1 
+	l2.append(line[-2]) #listing all crime id inl2
 	for i in l1:
-		count[i]+=1
-	print(l1,count)
-""""	for i in l1:
-		if i in l1 and i not in l2:
-			l2.append(l1)
-			print(list(itertools.accumulate(l2)))
-			print(''.join(i))"""
+		if i not in dict:
+			dict[i]=1
+		else:
+			dict[i]+=1
+print(dict)
 
+	#count[i]+=1
+	#print(dict,l2)
 
-
-
-
-
-
-
-
-
-
-#	print(l1)
-#	for i in line:
-#	print(line[-1],count)
-#	print(line[-1],count)
-#	x=set(l1)
-#	print(x)
-#x=set(l1)
-#print(x,i)
-		#l1.append(line[-1])
-		#print(l1)"""
-
-		#else:
-		#	i+=line[-1]
-		#	print(line[-1])
