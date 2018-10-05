@@ -1,6 +1,5 @@
 #Comment
 file=open("Crime.csv")
-count=Counter()
 dict={}
 l1=[] #list1
 l2=[] #list2
@@ -15,11 +14,11 @@ for i in l1:
 			dict[i]=1
 		else:
 			dict[i]+=1
-print([dict])
-#test=zip(dict,l2)
-#for xy in test:
-#	print(xy)
-#print(l2[0:])
-		#count[i]+=1
-	#print(dict,l2)
+print(dict)
+print(l2)
+"""test=zip(dict,l2)
+for xy in test:
+	print(xy)"""
+#count[i]+=1
+#print(dict,l2)
 
